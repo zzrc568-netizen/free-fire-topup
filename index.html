@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Fire Top Up</title>
+<style>
+body {
+  background:#101522;
+  color:white;
+  font-family:Arial,sans-serif;
+  text-align:center;
+  padding:20px;
+}
+h1 {color:#ffb52e}
+.card {
+  background:#202b40;
+  padding:20px;
+  margin:15px auto;
+  border-radius:15px;
+  max-width:350px;
+}
+input,select,button {
+  padding:12px;
+  margin:8px;
+  border-radius:8px;
+  border:0;
+  width:85%;
+}
+button {
+  background:#ff9d18;
+  font-weight:bold;
+}
+</style>
+</head>
+<body>
+<h1>🔥 FREE FIRE TOP UP 🔥</h1>
+<div class="card">
+<h2>เติมเพชรทดลอง</h2>
+<input id="uid" placeholder="กรอก UID ผู้เล่น">
+<select id="pack">
+<option value="100">100 เพชร</option>
+<option value="310">310 เพชร</option>
+<option value="520">520 เพชร</option>
+<option value="1060">1060 เพชร</option>
+</select>
+<button onclick="order()">สั่งซื้อทดลอง</button>
+<p id="result"></p>
+</div>
+<script>
+function order(){
+ const uid=document.getElementById("uid").value.trim();
+ const pack=document.getElementById("pack").value;
+ if(!uid){
+  alert("กรุณากรอก UID");
+  return;
+ }
+ document.getElementById("result").innerText=
+ "รายการทดลอง: UID "+uid+
+ " จำนวน "+pack+" เพชร";
+}
+</script>
+</body>
+</html>
